@@ -56,17 +56,14 @@ app.filter("productLegth", function () {
 })
 app.filter("productFilter", function () {
     return function (productList, search_term) {
-        console.log(search_term);
-        if (search_term == null || search_term== "undefined") {
-            return productList;
-        }
-        else {
-            productList = productList.filter(product => product.name.toLowerCase().indexOf(search_term.toLowerCase()) !== -1)
+        
+       
+           return productList.filter(product => product.name.toLowerCase().indexOf(search_term.toLowerCase()) !== -1)
            
-            return productList;
+           
         }
     }
-})
+)
 app.controller("AboutController", function ($scope) {
     $scope.companyDetails = {
         name: "Cytonn Investemnts"
